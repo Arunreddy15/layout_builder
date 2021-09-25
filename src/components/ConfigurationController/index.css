@@ -1,0 +1,11 @@
+/* Write your CSS here */
+
+* {
+  margin: 0;
+}
+.configurationController-container {
+  background-color: #475569;
+  padding: 10px 0 0 30px;
+  height: 20vh;
+  color: white;
+}

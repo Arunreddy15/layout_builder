@@ -1,0 +1,25 @@
+/* Write your CSS here */
+@media screen and (min-width: 552px) {
+  .header {
+    background-color: #cbd5e1;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #475569;
+  }
+}
+@media screen and (max-width: 552px) {
+  .header {
+    background-color: #cbd5e1;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #475569;
+  }
+}
