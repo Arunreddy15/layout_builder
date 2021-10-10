@@ -7,6 +7,9 @@ const ConfigurationController = () => (
   <ConfigurationContext.Consumer>
     {value => {
       const {
+        showContent,
+        showLeftNavbar,
+        showRightNavbar,
         onToggleShowContent,
         onToggleShowLeftNavbar,
         onToggleShowRightNavbar,
@@ -26,23 +29,35 @@ const ConfigurationController = () => (
         <div className="configurationController-container">
           <h1>Layout</h1>
           <div>
-            <input type="checkbox" onChange={onToggleShowContents} />
-            <span>Content</span>
-            <br />
-            <input
-              type="checkbox"
-              value="left-navbar"
-              onChange={onToggleShowLeftNavbars}
-            />
-            <span>Left Navbar</span>
-            <br />
-            <input
-              type="checkbox"
-              value="right-navbar"
-              onChange={onToggleShowRightNavbars}
-            />
-            <span>Right Navbar</span>
-            <br />
+            <div className="controls">
+              <input
+                type="checkbox"
+                id="content"
+                onChange={onToggleShowContents}
+                checked={showContent}
+              />
+              <label htmlFor="content">Content</label>
+            </div>
+            <div className="controls">
+              <input
+                type="checkbox"
+                value="left-navbar"
+                id="left"
+                onChange={onToggleShowLeftNavbars}
+                checked={showLeftNavbar}
+              />
+              <label htmlFor="left">Left Navbar</label>
+            </div>
+            <div className="controls">
+              <input
+                type="checkbox"
+                value="right-navbar"
+                onChange={onToggleShowRightNavbars}
+                id="right"
+                checked={showRightNavbar}
+              />
+              <label htmlFor="right">Right Navbar</label>
+            </div>
           </div>
         </div>
       )

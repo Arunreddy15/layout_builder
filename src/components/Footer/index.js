@@ -1,5 +1,5 @@
 // Write your code here
 import './index.css'
 
-const Footer = () => <footer className="footer">Footer</footer>
+const Footer = () => <h1 className="footer">Footer</h1>
 export default Footer

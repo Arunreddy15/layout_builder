@@ -33,9 +33,9 @@ class App extends Component {
           showContent,
           showLeftNavbar,
           showRightNavbar,
-          onToggleShowContent: this.onToggleShowContent(),
-          onToggleShowLeftNavbar: this.onToggleShowLeftNavbar(),
-          onToggleShowRightNavbar: this.onToggleShowRightNavbar(),
+          onToggleShowContent: this.onToggleShowContent,
+          onToggleShowLeftNavbar: this.onToggleShowLeftNavbar,
+          onToggleShowRightNavbar: this.onToggleShowRightNavbar,
         }}
       >
         <ConfigurationController />

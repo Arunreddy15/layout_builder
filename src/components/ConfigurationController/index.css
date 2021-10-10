@@ -9,3 +9,15 @@
   height: 20vh;
   color: white;
 }
+.controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+label {
+  margin-left: 10px;
+}
+input {
+  height: 18px;
+  width: 18px;
+}

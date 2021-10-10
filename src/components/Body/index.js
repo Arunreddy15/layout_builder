@@ -10,22 +10,28 @@ class Body extends Component {
       <ConfigurationContext.Consumer>
         {value => {
           const {showContent, showLeftNavbar, showRightNavbar} = value
-          const isShowContent = showContent ? '' : 'not-show'
-          const isShowLeft = showLeftNavbar ? '' : 'not-show'
-          const isShowRight = showRightNavbar ? '' : 'not-show'
+          const isShowContent = showContent ? 'content' : 'content not-show'
+          const isShowLeft = showLeftNavbar
+            ? 'left-navbar'
+            : 'left-navbar not-show'
+          const isShowRight = showRightNavbar
+            ? 'right-navbar'
+            : 'right-navbar not-show'
 
           return (
             <div className="flexible-layout">
-              <div className="left-navbar">
+              <div className={isShowLeft}>
                 <h1>Left Navbar Menu</h1>
-                <ul className="leftnavbar-list">
-                  <li>Item 1</li>
-                  <li>Item 2</li>
-                  <li>Item 3</li>
-                  <li>Item 4</li>
-                </ul>
+                <div className="leftnavbar-list">
+                  <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                  </ul>
+                </div>
               </div>
-              <div className="content">
+              <div className={isShowContent}>
                 <h1>Content</h1>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -33,7 +39,7 @@ class Body extends Component {
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div className="right-navbar">
+              <div className={isShowRight}>
                 <h1>Right Navbar</h1>
                 <ul className="rightnavbar-list">
                   <li>

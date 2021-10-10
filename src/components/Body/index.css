@@ -147,3 +147,6 @@ ul {
     font-size: 14px;
   }
 }
+.not-show {
+  display: none;
+}
